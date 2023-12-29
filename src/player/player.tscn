@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bpx12cx2ekd56"]
+[gd_scene load_steps=15 format=3 uid="uid://bpx12cx2ekd56"]
 
 [ext_resource type="Texture2D" uid="uid://b221a20fn13y6" path="res://assets/Graphical Assets/sprites/player/idle/player-idle-1.png" id="1_ffwm0"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_iux1d"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dckgnxywmsess" path="res://assets/Graphical Assets/sprites/player/run/player-run-4.png" id="9_ijle5"]
 [ext_resource type="Texture2D" uid="uid://dbjckltu1y4ds" path="res://assets/Graphical Assets/sprites/player/run/player-run-5.png" id="10_kpycf"]
 [ext_resource type="Texture2D" uid="uid://bhj6tm50yimuw" path="res://assets/Graphical Assets/sprites/player/run/player-run-6.png" id="11_udleq"]
+[ext_resource type="Script" path="res://player/camera.gd" id="12_t3t2b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rcdb3"]
 size = Vector2(42, 66)
@@ -71,3 +72,7 @@ scale = Vector2(3.0625, 3.0625)
 sprite_frames = SubResource("SpriteFrames_uupql")
 animation = &"run"
 autoplay = "idle"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+script = ExtResource("12_t3t2b")
